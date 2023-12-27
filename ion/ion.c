@@ -139,22 +139,22 @@ typedef enum TokenKind {
 size_t copy_token_kind_str(char *dest, size_t dest_size, TokenKind kind) {
     size_t n = 0;
     switch (kind) {
-    case 0:
-        n = snprintf(dest, dest_size, "end of file");
-        break;
-    case TOKEN_INT:
-        n = snprintf(dest, dest_size, "integer");
-        break;
-    case TOKEN_NAME:
-        n = snprintf(dest, dest_size, "name");
-        break;
-    default:
-        if (kind < 128 && isprint(kind)) {
-            n = snprintf(dest, dest_size, "%c", kind);
-        } else {
-            n = snprintf(dest, dest_size, "<ASCII %d>", kind);
-        }
-        break;
+        case 0:
+            n = snprintf(dest, dest_size, "end of file");
+            break;
+        case TOKEN_INT:
+            n = snprintf(dest, dest_size, "integer");
+            break;
+        case TOKEN_NAME:
+            n = snprintf(dest, dest_size, "name");
+            break;
+        default:
+            if (kind < 128 && isprint(kind)) {
+                n = snprintf(dest, dest_size, "%c", kind);
+            } else {
+                n = snprintf(dest, dest_size, "<ASCII %d>", kind);
+            }
+            break;
     }
     return n;
 }
