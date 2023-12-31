@@ -344,6 +344,7 @@ top:
         }
         break;
     CASE1('^', '=', TOKEN_XOR_ASSIGN)
+    CASE1(':', '=', TOKEN_COLON_ASSIGN)
     CASE1('*', '=', TOKEN_MUL_ASSIGN)
     CASE1('/', '=', TOKEN_DIV_ASSIGN)
     CASE1('%', '=', TOKEN_MOD_ASSIGN)
@@ -351,7 +352,6 @@ top:
     CASE2('-', '=', TOKEN_SUB_ASSIGN, '-', TOKEN_DEC)
     CASE2('&', '=', TOKEN_AND_ASSIGN, '&', TOKEN_AND)
     CASE2('|', '=', TOKEN_OR_ASSIGN, '|', TOKEN_OR)
-    CASE1(':', '=', TOKEN_COLON_ASSIGN)
     default:
         token.kind = *stream++;
         break;
