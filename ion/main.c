@@ -1,3 +1,14 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <assert.h>
+#include <stdlib.h>
+#include <math.h>
+#include <ctype.h>
+#include <string.h>
+#include <stdarg.h>
+#include <inttypes.h>
 #include "common.c"
 #include "lex.c"
 
