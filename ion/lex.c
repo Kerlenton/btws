@@ -270,7 +270,7 @@ void scan_str() {
         break;
 
 void next_token() {
-top:
+repeat:
     token.start = stream;
     token.mod = 0;
     switch (*stream) {
@@ -278,7 +278,7 @@ top:
             while (isspace(*stream)) {
                 stream++;
             }
-            goto top;
+            goto repeat;
             break;
         case '\'':
             scan_char();
