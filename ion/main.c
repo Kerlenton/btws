@@ -12,6 +12,7 @@
 
 #include "common.c"
 #include "lex.c"
+#include "ast.h"
 #include "ast.c"
 #include "print.c"
 
