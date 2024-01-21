@@ -88,7 +88,7 @@ Expr *parse_expr_operand() {
         } else {
             return expr_name(name);
         }
-    } else if (match_keyword(sizeof_keyword) {
+    } else if (match_keyword(sizeof_keyword)) {
         expect_token('(');
         if (match_token(':')) {
             Typespec *type = parse_type();
